@@ -25,8 +25,8 @@ class Configuration implements ConfigurationInterface
                 ->scalarNode('db_driver')->defaultValue('orm')->end()
                 ->scalarNode('firewall_name')->defaultValue('main')->end()
                 ->scalarNode('user_class')->defaultValue('ZIMZIM\UserBundle\Entity\User')->end()
-                ->scalarNode('registration.form.type')->defaultValue('zimzim_user_registration')->end()
-                ->scalarNode('profile.form.type')->defaultValue()->end('zimzim_user_profile')
+                ->scalarNode('registration_form_type')->defaultValue('zimzim_user_registration')->end()
+                ->scalarNode('profile_form_type')->defaultValue('zimzim_user_profile')->end()
             ->end();
         return $treeBuilder;
     }

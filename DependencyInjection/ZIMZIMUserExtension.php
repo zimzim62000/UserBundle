@@ -25,8 +25,8 @@ class ZIMZIMUserExtension extends Extension
         $container->setParameter($this->getAlias().'.db_driver', $config['db_driver']);
         $container->setParameter($this->getAlias().'.firewall_name', $config['firewall_name']);
         $container->setParameter($this->getAlias().'.user_class', $config['user_class']);
-        $container->setParameter($this->getAlias().'.registration.form.type', $config['registration.form.type']);
-        $container->setParameter($this->getAlias().'.profile.form.type', $config['profile.form.type']);
+        $container->setParameter($this->getAlias().'.registration.form.type', $config['registration_form_type']);
+        $container->setParameter($this->getAlias().'.profile.form.type', $config['profile_form_type']);
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
