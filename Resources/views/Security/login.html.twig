@@ -1,0 +1,46 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}
+    {{ 'views.user.security.login.title'|trans }}
+{% endblock %}
+
+
+{% block page %}
+    <div class="row">
+        <div class="small-12 large-12 columns">
+            <h1 class="text-center title headerpagehome">{{ 'views.user.security.login.title'|trans }}</h1>
+        </div>
+    </div>
+    <div class="row zimzim-panel">
+        <div class="small-12 large-12 columns">
+            <form action="{{ path("fos_user_security_check") }}" method="post">
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token }}"/>
+
+                <label for="username">{{ 'security.login.username'|trans({}, 'FOSUserBundle') }}
+                    <input {% if error %}class="error"{% endif %} type="text" id="username" name="_username"
+                           value="{{ last_username }}" required="required"/>
+                </label>
+                {% if error %}
+                    <small class="error">{{ error.messageKey|trans(error.messageData, 'security') }}</small>
+                {% endif %}
+                <label for="password">{{ 'security.login.password'|trans({}, 'FOSUserBundle') }}
+                    <input type="password" id="password" name="_password" required="required"/>
+                </label>
+
+                <input type="checkbox" id="remember_me" name="_remember_me" value="on"/>
+                <label for="remember_me">{{ 'security.login.remember_me'|trans({}, 'FOSUserBundle') }}</label>
+
+                <input type="submit" id="_submit" name="_submit" class="small button"
+                       value="{{ 'security.login.submit'|trans({}, 'FOSUserBundle') }}"/>
+            </form>
+            <div class="row">
+                <div class="small-12 columns text-right">
+                    <a href="{{ path('fos_user_resetting_request') }}">
+                        {{ 'views.user.security.login.forget'|trans }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock page %}

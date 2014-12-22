@@ -1,0 +1,10 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}
+    {{ 'views.user.registration.register.title'|trans }}
+{% endblock %}
+
+
+{% block page %}
+    {% include "FOSUserBundle:Registration:register_content.html.twig" %}
+{% endblock page %}

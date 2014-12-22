@@ -1,0 +1,25 @@
+views:
+    user:
+        profile:
+            show:
+                title: "Mon compte"
+            edit:
+                title: Modifier mes informations
+        registration:
+            register:
+                title: "Création de compte"
+            confirmed:
+                title: "Création de compte réussit"
+        security:
+            login:
+                title: "Connectez-vous"
+                forget: "Mot de passe oublié ?"
+        resetting:
+            checkemail:
+                title: "Changement de mot de passe en cours"
+form:
+    user:
+        form:
+            type:
+                profileusertype:
+                    label: Mot de passe ( laisser vide si pas de modification )

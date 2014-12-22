@@ -1,0 +1,9 @@
+{% extends "::base.html.twig" %}
+
+{% block offcanvas %}
+    {% embed "::navbar.html.twig" %}
+        {% block page %}}
+            {% include "FOSUserBundle:Resetting:reset_content.html.twig" %}
+        {% endblock page %}
+    {% endembed %}
+{% endblock offcanvas %}

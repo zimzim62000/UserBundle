@@ -1,0 +1,9 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}
+    {{ 'views.user.profile.show.title'|trans }}
+{% endblock %}
+
+{% block page %}
+    {% include "FOSUserBundle:Profile:show_content.html.twig" %}
+{% endblock page %}

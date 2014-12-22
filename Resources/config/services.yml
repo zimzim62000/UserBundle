@@ -1,0 +1,19 @@
+parameters:
+    zimzim_user_provider.class: ZIMZIM\UserBundle\Security\Core\User\FOSUBUserProvider
+
+services:
+    zimzim_user_provider:
+        class: "%zimzim_user_provider.class%"
+        arguments: [@fos_user.user_manager,{google: google_id, facebook: facebook_id, twitter: twitter_id}]
+
+    zimzim_user.registration.form.type:
+        class: ZIMZIM\UserBundle\Form\Type\RegistrationFormType
+        arguments: [%fos_user.model.user.class%]
+        tags:
+            - { name: form.type, alias: zimzim_user_registration }
+
+    zimzim_user.profile.form.type:
+        class: ZIMZIM\UserBundle\Form\Type\ProfileUserType
+        arguments: [%fos_user.model.user.class%]
+        tags:
+            - { name: form.type, alias: zimzim_user_profile }

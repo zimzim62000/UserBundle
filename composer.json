@@ -1,0 +1,22 @@
+{
+    "name": "zimzim62000/user-bundle",
+    "description": "Symfony2 ZIMZIM user Bundle",
+    "keywords": ["Symfony", "user", "zimzim62000"],
+    "homepage": "https://github.com/zimzim62000/UserBundle",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [{"name": "Zimmmermann Fabien", "email": "zimzim62000@gmail.com"}],
+    "require": {
+        "php": ">=5.4.0",
+        "symfony/symfony": ">=2.0.0",
+        "twig/twig": ">=1.5.0"
+    },
+    "autoload": {
+        "psr-4": { "ZIMZIM\\UserBundle\\": "" }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
