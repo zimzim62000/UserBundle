@@ -30,56 +30,56 @@ class User extends BaseUser
      *
      * @ORM\Column(name="firstname", type="string", length=255, nullable=true)
      */
-    private $firstname;
+    protected $firstname;
 
     /**
      * @var string
      *
      * @ORM\Column(name="lastname", type="string", length=255, nullable=true)
      */
-    private $lastname;
+    protected $lastname;
 
     /**
      * @var string
      *
      * @ORM\Column(name="google_id", type="string", length=255, nullable=true)
      */
-    private $google_id;
+    protected $google_id;
 
     /**
      * @var string
      *
      * @ORM\Column(name="google_access_token", type="string", length=255, nullable=true)
      */
-    private $googleAccessToken;
+    protected $googleAccessToken;
 
     /**
      * @var string
      *
      * @ORM\Column(name="facebook_id", type="string", length=255, nullable=true)
      */
-    private $facebook_id;
+    protected $facebook_id;
 
     /**
      * @var string
      *
      * @ORM\Column(name="facebook_access_token", type="string", length=255, nullable=true)
      */
-    private $facebookAccessToken;
+    protected $facebookAccessToken;
 
     /**
      * @var string
      *
      * @ORM\Column(name="twitter_id", type="string", length=255, nullable=true)
      */
-    private $twitter_id;
+    protected $twitter_id;
 
     /**
      * @var string
      *
      * @ORM\Column(name="twitter_access_token", type="string", length=255, nullable=true)
      */
-    private $twitterAccessToken;
+    protected $twitterAccessToken;
 
 
     /**
