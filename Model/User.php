@@ -1,6 +1,6 @@
 <?php
 
-namespace ZIMZIM\UserBundle\Entity;
+namespace ZIMZIM\UserBundle\Model;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
@@ -14,7 +14,7 @@ use FOS\UserBundle\Model\User as BaseUser;
  * @ORM\Entity
  * @ORM\HasLifecycleCallbacks
  */
-class User extends BaseUser
+abstract class User extends BaseUser
 {
     /**
      * @var integer
