@@ -1,5 +1,11 @@
 {% extends "::base.html.twig" %}
 
 {% block page %}
+
+    <h1 class="text-center title headerpagehome">
+        {{ 'views.user.resetting.request.title'|trans }}
+    </h1>
+
 	{% include "FOSUserBundle:Resetting:request_content.html.twig" %}
+
 {% endblock page %}

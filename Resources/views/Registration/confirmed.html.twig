@@ -6,16 +6,13 @@
 
 
 {% block page %}
-    <div class="row">
-        <div class="small-12 large-12 columns">
-            <h1 class="text-center title headerpagehome">{{ 'views.user.registration.confirmed.title'|trans }}</h1>
-        </div>
-    </div>
-    <div class="row">
-        <div class="small-12 large-12 columns">
-            <p class="case-home-p">{{ 'registration.confirmed'|trans({'%username%': user.username}, 'FOSUserBundle') }}</p>
-        </div>
-    </div>
+
+    <h1 class="text-center title headerpagehome">{{ 'views.user.registration.confirmed.title'|trans }}</h1>
+
+    <h2 class="alert-box success text-center">
+        {{ 'registration.confirmed'|trans({'%username%': user.username}, 'FOSUserBundle') }}
+    </h2>
+
     {% if app.session is not empty %}
         {% set targetUrl = app.session.get('_security.' ~ app.security.token.providerKey ~ '.target_path') %}
         {% if targetUrl is not empty %}<p><a
@@ -23,9 +20,4 @@
             </p>{% endif %}
     {% endif %}
 
-    <div class="row">
-        <div class="medium-12 columns">
-
-        </div>
-    </div>
 {% endblock page %}

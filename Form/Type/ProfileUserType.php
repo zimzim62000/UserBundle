@@ -18,7 +18,7 @@ class ProfileUserType extends BaseType
             'password',
             array('label' => 'form.user.form.type.profileusertype.label', 'required' => false)
         );
-        $builder->add('submit', 'submit', array('label' => 'button.update'));
+        $builder->add('submit', 'submit', array('label' => 'button.update', 'attr' => array('class' => 'tiny button success')));
     }
 
     /**

@@ -6,5 +6,9 @@
 
 
 {% block page %}
+
+    <h1 class="text-center title headerpagehome">{{ 'views.user.registration.register.title'|trans }}</h1>
+
     {% include "FOSUserBundle:Registration:register_content.html.twig" %}
+
 {% endblock page %}

@@ -1,19 +1,18 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
-<div class="row zimzim-panel">
+<div class="row panel">
     <div class="small-12 columns text-center">
 
         <form action="{{ path('fos_user_resetting_send_email') }}" method="POST" class="fos_user_resetting_request">
-            <div>
-                {% if invalid_username is defined %}
-                    <p>{{ 'resetting.request.invalid_username'|trans({'%username%': invalid_username}) }}</p>
-                {% endif %}
-                <label for="username">{{ 'resetting.request.username'|trans }}</label>
+            {% if invalid_username is defined %}
+                <h2 class="alert-box alert  text-center">
+                    {{ 'resetting.request.invalid_username'|trans({'%username%': invalid_username}) }}
+                </h2>
+            {% endif %}
+            <label for="username">{{ 'resetting.request.username'|trans }}
                 <input type="text" id="username" name="username" required="required"/>
-            </div>
-            <div>
-                <input type="submit" class="small button round" value="{{ 'resetting.request.submit'|trans }}"/>
-            </div>
+            </label>
+            <input type="submit" class="tiny button success" value="{{ 'resetting.request.submit'|trans }}"/>
         </form>
 
     </div>

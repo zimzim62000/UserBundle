@@ -2,19 +2,17 @@
 
 
 {% block page %}
-    <div class="row">
-        <div class="small-12 large-12 columns">
-            <h1 class="text-center title headerpagehome">
-                {{ 'views.user.resetting.checkemail.title'|trans }}
-            </h1>
-        </div>
-    </div>
+
+    <h1 class="text-center title headerpagehome">
+        {{ 'views.user.resetting.checkemail.title'|trans }}
+    </h1>
+
 
     <div class="row ">
-        <div class="small-8 small-centered columns zimzim-panel">
-            <p>
+        <div class="small-8 small-centered columns panel">
+            <h4 class="alert-box success text-center">
                 {{ 'resetting.check_email'|trans({'%email%': email}, 'FOSUserBundle') }}
-            </p>
+            </h4>
         </div>
     </div>
 {% endblock page %}

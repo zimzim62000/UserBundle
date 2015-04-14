@@ -7,16 +7,22 @@ views:
                 title: Modifier mes informations
         registration:
             register:
-                title: "Création de compte"
+                title: "Inscription"
+                login: "Vous avez déjà un compte... Connectez-vous !"
             confirmed:
                 title: "Création de compte réussit"
         security:
             login:
                 title: "Connectez-vous"
                 forget: "Mot de passe oublié ?"
+                nologin: "Pas de compte ?"
         resetting:
             checkemail:
                 title: "Changement de mot de passe en cours"
+            request:
+                title: "Demande de changement de mot de passe"
+            reset:
+                title: "Changement de mot de passe"
 form:
     user:
         form:
